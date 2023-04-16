@@ -23,7 +23,7 @@ bool CheckFile(const std::filesystem::path& path, bool dir_write_required = true
 }
 
 bool CheckExistance(const std::filesystem::path& path) {
-    return !access(path.c_str(), F_OK);
+    return !(access(path.c_str(), F_OK) == -1);
 }
 
 bool CheckSudo() {
@@ -87,6 +87,7 @@ int main(int argc, char** argv) {
     }
     if (!CheckExistance(vm["filename"].as<std::string>())) {
         std::cout << "Seems like file doesn't exist! Returining\n";
+        return -1;
     }
     bool as_sudo = false;
     if (!CheckFile(vm["filename"].as<std::string>())) {
