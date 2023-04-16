@@ -10,7 +10,12 @@
 - openssl (libcrypto)
 - boost::program_options
 ## Build
-Built with cmake
+Build with cmake
+```
+mkdir build && cd build #insert your favorite directory name instead of build
+cmake ..
+make
+```
 
 ## Usage
 Does 3 things: 
