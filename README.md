@@ -23,7 +23,7 @@ Does 3 things:
 - zips given file
 - splits given file by delimiter and creates a directory. Example 
 ```
-./bezopastnost -s --delim ,, myfile 
+./lab2 -s --delim ,, myfile 
 ```
 myfile as follows
 ```
